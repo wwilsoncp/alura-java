@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/gerenciador/novoFuncionario" method="POST">
+		Nome: <input type="text" name="nome"/>
+		<br>
+		Cargo: <input type="text" name="cargo"/>
+		<br>
+		<button type="submit">Salvar</button>
+	</form>
+</body>
+</html>

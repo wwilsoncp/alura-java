@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.alura.gerenciador.servlet.NovoFuncionario&apos; to &apos;NovoFuncionarioServlet&apos;&#x0D;&#x0A;- Original project: &apos;gerenciador&apos;&#x0D;&#x0A;- Original element: &apos;br.com.alura.gerenciador.servlet.NovoFuncionario&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.alura.gerenciador.servlet.NovoFuncionarioServlet&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NovoFuncionario&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.alura.gerenciador.servlet{NovoFuncionario.java[NovoFuncionario" matchStrategy="1" name="NovoFuncionarioServlet" qualified="false" references="true" similarDeclarations="false" stamp="1651629497735" textual="false" version="1.0"/>
+</session>
