@@ -1,0 +1,18 @@
+<%
+  // scriplet - escrita de java dentro de uma página html, ele é executado no lado do servidor e retorna a página html pronta
+  String nomeEmpresa = (Empresa)request.getAttribute("empresa").getNome();
+  String razaoSocial= "Google Inc.";
+  System.out.println(nomeEmpresa);
+  System.out.println(razaoSocial);
+%>
+
+<html>
+  <body>
+	Empresa cadastrada com sucesso!
+  <br/>
+	Nome da Empresa: <% out.println(nomeEmpresa); %> 
+  <br/>
+    Razão Social: <%= razaoSocial %>
+  </body>
+</html>
+

@@ -1,0 +1,18 @@
+<%@ page import="java.util.List, br.com.alura.gerenciador.servlet.Empresa" %>
+<%
+  // scriplet - escrita de java dentro de uma página html, ele é executado no lado do servidor e retorna a página html pronta
+  Empresa empresa = (Empresa)request.getAttribute("empresa");
+  System.out.println(empresa.getNome());
+  System.out.println(empresa.getRazaoSocial());
+%>
+
+<html>
+  <body>
+	Empresa cadastrada com sucesso!
+  <br/>
+	Nome da Empresa: <% out.println(nomeEmpresa); %> 
+  <br/>
+    Razão Social: <%= razaoSocial %>
+  </body>
+</html>
+

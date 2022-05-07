@@ -1,8 +1,10 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,22 +22,25 @@ public class NovaEmpresaServlet extends HttpServlet {
 		System.out.println("Nova empresa");
 		String nomeEmpresa = request.getParameter("nome");
 		String razaoSocial = request.getParameter("razaoSocial");
-		
-		Empresa empresa = new Empresa(nomeEmpresa, razaoSocial);
+		String dataAberturaString = request.getParameter("dataAbertura");
+		Date dataAbertura = null;
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			dataAbertura = sdf.parse(dataAberturaString);
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}
+		Empresa empresa = new Empresa(nomeEmpresa, razaoSocial, dataAbertura);
 		
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("Empresa cadastrada com sucesso!");
-		out.println("<br>");
-		out.println("Nome da Empresa: " + nomeEmpresa);
-		out.println("<br>");
-		out.println("Razão Social: " + razaoSocial);
-		out.println("</body>");
-		out.println("</html>");
+		request.setAttribute("empresa", empresa);
+		
+		// chamar a página jsp que irá exibir para o usuário
+		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
+		rd.forward(request, response);
+
 	}
 
 }
