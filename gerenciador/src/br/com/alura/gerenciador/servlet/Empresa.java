@@ -17,6 +17,13 @@ public class Empresa {
 		this.dataAbertura = dataAbertura;
 	}
 
+	public Empresa(Integer id, String nome, String razaoSocial, Date dataAbertura) {
+		this.setId(id);
+		this.setNome(nome);
+		this.setRazaoSocial(razaoSocial);
+		this.dataAbertura = dataAbertura;
+	}
+	
 	public Empresa(String nome, String razaoSocial, Date dataAbertura) {
 		this.setNome(nome);
 		this.setRazaoSocial(razaoSocial);
