@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-  Olá! Primeiro Servelet. JSP.
+  Olá! Primeiro Servlet. JSP.
 </body>
 </html>

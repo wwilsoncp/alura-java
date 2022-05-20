@@ -10,8 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/oi")
+@WebServlet(urlPatterns = {"/oi","/iae"})
 public class OiMundoServlet extends HttpServlet {
+	
+	public OiMundoServlet() {
+		System.out.println("Servlet OiMundoServlet criado!");
+	}
+	
 	private static final long serialVersionUID = 1L;
 	
 	@Override
@@ -23,7 +28,7 @@ public class OiMundoServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			out.println("<html>");
 			out.println("<body>");
-			out.println("Primeiro Servelet. Retornado HTML através do response.");
+			out.println("Primeiro Servlet. Retornado HTML através do response.");
 			out.println("</body>");
 			out.println("</html>");
 			System.out.println("Servlet foi chamado.");

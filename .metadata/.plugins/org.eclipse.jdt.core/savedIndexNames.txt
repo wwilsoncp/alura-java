@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+C:\RepositorioGit\alura\alura-java\workspace\.metadata\.plugins\org.eclipse.jdt.core
 3581202033.index
 1834396592.index
-456790899.index
 1269634160.index
 4211825828.index
 3787649383.index
