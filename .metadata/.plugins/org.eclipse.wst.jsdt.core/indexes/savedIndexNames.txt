@@ -1,9 +1,5 @@
-INDEX VERSION 1.4+C:\RepositorioGit\alura\alura-java\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2089243434.index
-456790899.index
-4187284595.index
-1478421391.index
-4056583208.index
-1532149616.index
-1532149616.index
-1061629421.index
+INDEX VERSION 1.4+C:\RepositorioGit\cursos\alura\alura-java\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3765960336.index
+2331770927.index
+3751915898.index
+695319007.index

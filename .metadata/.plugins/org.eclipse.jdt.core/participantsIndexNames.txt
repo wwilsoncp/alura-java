@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
 C:\RepositorioGit\alura\alura-java\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1532149616.index
 \gerenciador\src
+C:\RepositorioGit\cursos\alura\alura-java\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1532149616.index
+\gerenciador\src

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="br.com.alura.gerenciador.servlet.Funcionario" %>
+<%@ page import="br.com.alura.gerenciador.modelo.Funcionario" %>
 <%
   // scriplet - escrita de java dentro de uma página html, ele é executado no lado do servidor e retorna a página html pronta
   Funcionario funcionario = (Funcionario)request.getAttribute("funcionario");
