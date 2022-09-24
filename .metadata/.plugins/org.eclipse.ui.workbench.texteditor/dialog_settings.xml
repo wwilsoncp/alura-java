@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="NovaEmpresa"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="System.out"/>
+			<item value="TypeAddress"/>
 			<item value="NovaEmpresa"/>
 			<item value="linkServeletNovaEmpresa"/>
 			<item value="empresa"/>
