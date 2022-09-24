@@ -19,4 +19,6 @@
     <fullyQualifiedTypeName name="org.apache.catalina.filters.ExpiresFilter.XHttpServletResponse"/>
     <fullyQualifiedTypeName name="br.com.alura.gerenciador.acao.NovaEmpresa"/>
     <fullyQualifiedTypeName name="br.com.alura.gerenciador.acao.RemoveEmpresa"/>
+    <fullyQualifiedTypeName name="br.com.alura.gerenciador.util.ReturnExecution"/>
+    <fullyQualifiedTypeName name="br.com.alura.gerenciador.acao.FormNovaEmpresa"/>
 </qualifiedTypeNameHistroy>

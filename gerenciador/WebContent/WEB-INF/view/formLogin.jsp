@@ -4,17 +4,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
 	<form action="${linkServeletNovaEmpresa}" method="post">
-		Nome: <input type="text" name="nome" />
+		Login: <input type="text" name="login" />
 		<br>
-		Razão Social: <input type="text" name="razaoSocial" />
 		<br>
-		Data Abertura: <input type="text" name="dataAbertura" />
-		<input type="hidden" name="acao" value="NovaEmpresa" />
-		<button type="submit">Salvar</button>
+		Senha: <input type="password" name="senha" />
+		<br>
+		<br>
+		<input type="hidden" name="acao" value="Login" />
+		<button type="submit">Acessar</button>
 	</form>
 </body>
 </html>

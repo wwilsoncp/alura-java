@@ -2,16 +2,17 @@ package br.com.alura.gerenciador.acao;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.modelo.Banco;
+import br.com.alura.gerenciador.util.ReturnExecution;
+import br.com.alura.gerenciador.util.TypeAddress;
 
-public class RemoveEmpresa {
+public class RemoveEmpresa extends ClassBase implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ReturnExecution executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Removendo...");
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
@@ -21,12 +22,9 @@ public class RemoveEmpresa {
 		Banco banco = new Banco();
 		banco.excluirEmpresa(id);
 		
-		// chamar a página jsp que irá exibir para o usuário
-		RequestDispatcher rd = request.getRequestDispatcher("entrada?acao=ListaEmpresas");
 		request.setAttribute("empresaExcluida", true);
-		rd.forward(request, response);		
+		return new ReturnExecution("entrada?acao=ListaEmpresas", TypeAddress.REDIRECT);
 		
-//		response.sendRedirect("listaEmpresas");
 	}
 
 }

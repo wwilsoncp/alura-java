@@ -9,8 +9,8 @@
 		<item key="selection" value="NovaEmpresa"/>
 		<list key="findhistory">
 			<item value="NovaEmpresa"/>
-			<item value="empresa"/>
 			<item value="linkServeletNovaEmpresa"/>
+			<item value="empresa"/>
 			<item value="removeEmpresa"/>
 			<item value="novoFuncionario"/>
 		</list>

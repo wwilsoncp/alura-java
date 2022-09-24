@@ -12,6 +12,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+    <c:import url="logout-parcial.jsp" />
+
+    Usuário Logado: ${usuarioLogado.login}
+    <br>
+    <br>
+
 	<c:if test="${not empty empresa}">
 		Empresa cadastrada com sucesso!
 		<br/>
@@ -28,7 +35,7 @@
 	</c:if>
 
 	<br/>
-	<a href="/gerenciador/formNovaEmpresa.jsp">Cadastrar Empresa</a>
+	<a href="entrada?acao=NovaEmpresaForm">Cadastrar Empresa</a>
 	<br/>
 	<br/>
 

@@ -8,6 +8,7 @@ import java.util.List;
 public class Banco {
 	
 	private static List<Empresa> lista = new ArrayList<Empresa>();
+	private static List<Usuario> listaUsuario = new ArrayList<Usuario>();
 	private static Integer chaveSequencial = 1;
 	
 	// bloco estático, são executados quando a máquina virtual carrega a classe
@@ -18,6 +19,13 @@ public class Banco {
 		Banco.lista.add(empresa);
 		Banco.lista.add(empresa2);
 		Banco.lista.add(empresa3);
+	}
+	
+	static {
+		Usuario usuario = new Usuario();
+		usuario.setLogin("will");
+		usuario.setSenha("will");
+		Banco.listaUsuario.add(usuario);
 	}
 
 	public void adiciona(Empresa empresa) {
@@ -50,5 +58,20 @@ public class Banco {
 		}
 		return null;
 	}
+	
+	public List<Usuario> getUsuarios() {
+		return Banco.listaUsuario;
+	}
+	
+	public Usuario existeUsuario(String login, String senha) {
+		for(Usuario usuario: listaUsuario) {
+			if (usuario.ehIgual(login, senha)) {
+				return usuario;
+			}
+			
+		}
+		return null;
+	}
+	
 
 }

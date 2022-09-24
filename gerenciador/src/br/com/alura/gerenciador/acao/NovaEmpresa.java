@@ -4,19 +4,18 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpServletResponse;
-
 
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
+import br.com.alura.gerenciador.util.ReturnExecution;
+import br.com.alura.gerenciador.util.TypeAddress;
 
-public class NovaEmpresa {
+public class NovaEmpresa extends ClassBase implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ReturnExecution executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Nova empresa");
 		String nomeEmpresa = request.getParameter("nome");
 		String razaoSocial = request.getParameter("razaoSocial");
@@ -33,14 +32,10 @@ public class NovaEmpresa {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-//		request.setAttribute("empresa", empresa);
-//		
-//		response.sendRedirect("listaEmpresas");
-		
-		// chamar a página jsp que irá exibir para o usuário
-		RequestDispatcher rd = request.getRequestDispatcher("entrada?acao=ListaEmpresas");
 		request.setAttribute("empresa", empresa);
-		rd.forward(request, response);
+		
+		return new ReturnExecution("entrada?acao=ListaEmpresas", TypeAddress.REDIRECT) ;
+				
 	}
 
 }

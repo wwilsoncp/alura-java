@@ -18,6 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <c:import url="logout-parcial.jsp" />
 	<c:if test="${not empty empresa}">
 		Empresa cadastrada com sucesso!
 		<br/>
